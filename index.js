@@ -61,5 +61,17 @@ inquirer
 
 
 // TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+        if(err) throw err;
+        console.log('Success');
+    });
+}
+
 
 // TODO: Create a function to initialize app
+function init(fileName, data) {
+    
+    writeToFile(fileName, data);
+}
+
